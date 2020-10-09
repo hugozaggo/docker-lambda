@@ -8,8 +8,8 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     strategy:
       matrix:
-        image-name: [base]
-        gdal-version: [2.4]
+        image-name: [base, base-2]
+        gdal-version: [2.4, 3.1]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
